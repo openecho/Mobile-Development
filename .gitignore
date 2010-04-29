@@ -1,0 +1,9 @@
+# Xcode noise
+*.pbxuser
+*.modelv3
+
+# OSX Noise
+.DS_Store
+
+# netbeans
+*nbproject*
