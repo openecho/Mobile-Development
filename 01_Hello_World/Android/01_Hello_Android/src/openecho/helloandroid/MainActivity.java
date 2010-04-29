@@ -21,5 +21,4 @@ public class MainActivity extends Activity {
         super.onCreate(icicle);
         setContentView(R.layout.main);
     }
-
 }
