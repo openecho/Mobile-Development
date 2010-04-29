@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">"
+    <ImageView
+        android:id="@+id/background"
+        android:src="@drawable/helloimage"
+        android:scaleType="centerCrop"
+        android:cropToPadding="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+    <TextView
+        id="@+id/text"
+        android:text="@string/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:textStyle="bold"
+        android:textColor="#F00"
+        android:background="#B000"
+        android:padding="12dip"
+        />
+</FrameLayout>

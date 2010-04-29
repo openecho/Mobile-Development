@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package openecho.helloimage;
+package openecho.helloimageworld;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -21,4 +21,5 @@ public class MainActivity extends Activity {
         super.onCreate(icicle);
         setContentView(R.layout.main);
     }
+
 }
