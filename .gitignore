@@ -7,3 +7,6 @@
 
 # netbeans
 *nbproject*
+*build*
+*dist*
+
