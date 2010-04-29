@@ -2,9 +2,9 @@
 This repository contains a variety of simple mobile development applications. This started as the [Mobile Development Challenge](http://thechaw.com/mobile_developer_challenge/wiki/home/Challenge_List) but lost momentem and has been stale for some time.
 
 My plan is,
-1. Port the Android app examples to Android 2.1
-2. Develop soultions in an on-going way
-3. Inspire people to pick up the development for other platforms (yes you [@predominant](http://github.com/predominant))
+ 1. Port the Android app examples to Android 2.1
+ 2. Develop soultions in an on-going way
+ 3. Inspire people to pick up the development for other platforms (yes you [@predominant](http://github.com/predominant))
 
 # The Original Challenges
 
