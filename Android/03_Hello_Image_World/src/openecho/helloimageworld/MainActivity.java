@@ -9,7 +9,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Android Implementation for challenge 02
+ * Android Implementation for challenge 03
  *
  * @author openecho
  */
