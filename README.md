@@ -1,32 +1,31 @@
 # Mobile Development
-This repository contains a variety of simple mobile development applications. This started as the [Mobile Development Challenge](http://thechaw.com/mobile_developer_challenge/wiki/home/Challenge_List) but lost momentem and has been stale for some time.
+This repository contains a variety of simple mobile development applications. This started as the [Mobile Development Challenge](http://thechaw.com/mobile_developer_challenge/wiki/home/Challenge_List) but lost momentum and has been stale for some time.
 
 My plan is,
+
 1. Port the Android app examples to Android 2.1
-2. Develop soultions in an on-going way
+2. Come up with some new and interesting challenges
 3. Inspire people to pick up the development for other platforms (yes you [@predominant](http://github.com/predominant))
 
 # The Original Challenges
 
 ## Challenge Index
-{{{
-01 - Hello World
-02 - Hello Image
-03 - Hello Image World
-04 - Hello You
-05 - Show Us Your Balls
-06 - Moving Balls
-07 - Bouncey Balls
-08 - Indecisive Balls
-09 - Reverse Balls
-10 - Lossy Balls
-11 - Noisy Balls
-12 - Touch My Balls
+	01 - Hello World
+	02 - Hello Image
+	03 - Hello Image World
+	04 - Hello You
+	05 - Show Us Your Balls
+	06 - Moving Balls
+	07 - Bouncey Balls
+	08 - Indecisive Balls
+	09 - Reverse Balls
+	10 - Lossy Balls
+	11 - Noisy Balls
+	12 - Touch My Balls
 
-15 - Icon Assignment
+	15 - Icon Assignment
 
-20 - Flick my Balls
-}}}
+	20 - Flick my Balls
 
 ### 01 - Hello World
 Display the text "Hello World" on the screen.

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">"
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Name?"/>
+        <Button
+            android:id="@+id/submit"
+            android:text="@string/button_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">"
+        <TextView
+            android:id="@+id/hello_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#F00"
+            android:background="#B111"
+            android:padding="12dip"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:visible="false"/>
+    </FrameLayout>
+</merge>
