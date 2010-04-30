@@ -16,7 +16,7 @@ import android.widget.TextView;
 /**
  * Android Implementation for challenge 04
  * 
- * @author jmarsden
+ * @author openecho
  */
 public class MainActivity extends Activity implements OnClickListener {
 
