@@ -31,11 +31,11 @@ My plan is,
 Display the text "Hello World" on the screen.
 
 ### 02 - Hello Image
-Display the supplied image "robot_porn.gif" on the screen.
+Display the supplied image [Robot Porn](http://github.com/openecho/Mobile-Development/blob/master/Android/02_Hello_Image/res/drawable/helloimage.png) on the screen.
 Preferably centered, and fit to screen, but not required.
 
 ### 03 - Hello Image World
-Display the supplied image "robot_porn.gif" on the screen, with "Hello World" overlaid over the image.
+Display the supplied image [Robot Porn](http://github.com/openecho/Mobile-Development/blob/master/Android/02_Hello_Image/res/drawable/helloimage.png) on the screen, with "Hello World" overlaid over the image.
 Preferably, the image is centred and fit to screen.
 Coloring of the text to make it stand out would be tops too.
 
