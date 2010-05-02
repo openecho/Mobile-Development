@@ -48,40 +48,39 @@ Display a circular object on the screen
 ### 06 - Moving Balls
 Display a circular object on the screen, moving in some manner
 
-### 07 - Bouncey Balls
-Display a moving circular object on the screen that moves at a constant rate.
-On collision with the screen boundary, this object should bounce and continue moving.
-Inelastic collisions are optional.
+### 07 - Check My Balls
+Display a moving circular object on the screen that moves at a runtime random direction.
+On collision with the screen boundary, this object should bounce and continue moving after having lost speed to emulate inelastic collisions.
+"Energy" is transferred from this collision to the background color by changing it somehow (lighter, darker, etc.).
+The ball will eventually come to a stop.
 
-### 08 - Indecisive Balls
-Same as 07 with the following additions/changes:
 A start/stop button will show "stop" when the ball is moving. Once pressed it will stop the ball, and the button will read "start".
 Starting will enable the ball to continue on its previous course at its previous speed.
+If the ball comes to a natural stop, the button should change to "start" and clicking start will start the ball off again on the previous vector.
 
-### 09 - Reverse Balls
-Same as 08 with the following additions/changes:
 A "reverse" button will cause the ball to reverse its direction, retaining speed.
 
-### 10 - Lossy Balls
-This challenge builds on 09 but should add the following additions/changes:
-Collisions with walls should be inelastic and the ball should also loose speed as it moves. This means that the ball will eventually come to a stop. When the ball hits a wall the screen should be rendered slightly brighter to highlight the impact (and give somewhere for the energy to be lost in a virtual way :-).
-
-### 11 - Noisy Balls
+### 08 - Noisy Balls
 This challenge builds on 10 but should add the following additions/changes:
 Sound is to be added to the challenge. A single sound sample is to be used and each time a wall is hit with the ball the sample should play. If the ball happens to hit two walls at exactly the same time (in the corner) only one sample should play.
 
-### 12 - Touch my Balls
-This challenge builds on 10 but should add the following additions/changes:
-In this challenge the start/stop and reverse buttons can be removed from the application. The application should start with a bouncing ball. When a user presses the screen the application should stop. When the user presses the screen again it starts with the ball going in a random direction at full speed.
+### 09 - Multi Ball
+Three balls are randomly placed within the view area. They start moving at random speeds in random vectors.
+Retaining the sound for all collisions, and loss of speed.
 
-### 15 - Icon Assignment
-A generic set of Icons is to be designed, similar, but with a color variation for the various platforms supported.
-This project involved assigning an icon to the application.
-All previous Applications should be modified to include the appropriate icon.
+### 10 - Touch my Balls
+This challenge builds on 08 (Single Ball) but should add the following additions/changes:
+In this challenge the start/stop and reverse buttons can be removed from the application.
+The application should start with a bouncing ball.
+When a user presses the screen the ball motion should stop.
+When the user presses the screen again it starts with the ball going in a random direction at full speed.
 
-### 20 - Flick my Balls
-This has been pushed back!
+Touching the screen where the ball is not present will have no effect.
 
-Touches to the screen must be handled. If the user touches the screen where the ball is then it will instantly come to a stop under their finger. If they move their finger around then the ball will follow it. As soon as they lift their finger the ball will continue in the direction it was last moving and act as it did in Noisy Balls.
+### 11 - Flick my Balls
+Touches to the screen must be handled.
+If the user touches the screen where the ball is then it will instantly come to a stop under their finger.
+If they move their finger around then the ball will follow it.
+As soon as they lift their finger the ball will continue to move.
 The direction is taken from the last movement of the users finger from the touch.
 
