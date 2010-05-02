@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the '05_Show_Us_Your_Balls' target in the '05_Show_Us_Your_Balls' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
