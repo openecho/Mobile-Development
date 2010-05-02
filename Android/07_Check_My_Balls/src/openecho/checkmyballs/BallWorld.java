@@ -180,15 +180,8 @@ public class BallWorld {
 		@Override
 		public void run() {
 			ProfileRecorder profiler = ProfileRecorder.sSingleton;
-			int mRotationRadius = Math.min(mWidth,mHeight)/4;
-			int[] mCentre = new int[] {mWidth/2,mHeight/2};
-			int i = 0;
-			
-			Vector location = null;
 			while (mRunning) {
 				profiler.start(ProfileRecorder.PROFILE_WORLD);
-				
-				
 				
 				profiler.stop(ProfileRecorder.PROFILE_WORLD);
 				try {
