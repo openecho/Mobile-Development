@@ -13,4 +13,4 @@
 # Eclipse
 .project
 .classpath
-*/bin/*
+/Android/*bin*
