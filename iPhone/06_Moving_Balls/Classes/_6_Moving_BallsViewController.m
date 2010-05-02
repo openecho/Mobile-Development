@@ -45,8 +45,8 @@
 
 - (void)gameLoop {
 	positionRotation += 5;
-	if (positionRotation >= 360) {
-		positionRotation = positionRotation % 360;
+	if (positionRotation >= 720) {
+		positionRotation = positionRotation % 720;
 	}
 	[self moveBall];
 }
@@ -54,7 +54,7 @@
 - (void)moveBall {
 	int radius = 100;
 	float radians = positionRotation * PI / 180;
-	[ball setCenter:CGPointMake(sin(radians) * radius + viewCenterX, cos(radians) * radius + viewCenterY)];
+	[ball setCenter:CGPointMake(sin(radians) * radius + viewCenterX, cos(radians / 2) * radius + viewCenterY)];
 }
 
 /*
