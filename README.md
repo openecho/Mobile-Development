@@ -16,16 +16,11 @@ My plan is,
 	04 - Hello You
 	05 - Show Us Your Balls
 	06 - Moving Balls
-	07 - Bouncey Balls
-	08 - Indecisive Balls
-	09 - Reverse Balls
-	10 - Lossy Balls
-	11 - Noisy Balls
-	12 - Touch My Balls
-
-	15 - Icon Assignment
-
-	20 - Flick my Balls
+	07 - Check My Balls
+	08 - Noisy Balls
+	09 - Multi Ball
+	10 - Touch My Balls
+	11 - Flick my Balls
 
 ### 01 - Hello World
 Display the text "Hello World" on the screen.
