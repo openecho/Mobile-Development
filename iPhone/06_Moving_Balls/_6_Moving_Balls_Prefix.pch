@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the '06_Moving_Balls' target in the '06_Moving_Balls' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
