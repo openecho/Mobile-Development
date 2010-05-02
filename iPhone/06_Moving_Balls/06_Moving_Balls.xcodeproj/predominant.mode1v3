@@ -327,14 +327,14 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C3647142118D81170037D966</string>
+										<string>C3647150118D87940037D966</string>
 										<key>history</key>
 										<array>
 											<string>C36470D1118D7A5B0037D966</string>
 											<string>C36470D2118D7A5B0037D966</string>
 											<string>C36470D3118D7A5B0037D966</string>
-											<string>C3647128118D7F570037D966</string>
-											<string>C3647129118D7F570037D966</string>
+											<string>C364714F118D87940037D966</string>
+											<string>C36470CF118D7A560037D966</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -534,9 +534,9 @@
 	<array>
 		<string>C36470E7118D7ABB0037D966</string>
 		<string>C36470E0118D7A5B0037D966</string>
+		<string>C36470DD118D7A5B0037D966</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>C3647050118D68320037D966</string>
-		<string>C36470DD118D7A5B0037D966</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/predominant/Projects/Mobile-Development/iPhone/06_Moving_Balls/06_Moving_Balls.xcodeproj</string>
 	</array>
@@ -1069,6 +1069,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBottomSmartGroupGIDs</key>
@@ -1130,8 +1132,6 @@
 							<string>185pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1183,7 +1183,7 @@
 			<key>WindowToolGUID</key>
 			<string>C36470DD118D7A5B0037D966</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

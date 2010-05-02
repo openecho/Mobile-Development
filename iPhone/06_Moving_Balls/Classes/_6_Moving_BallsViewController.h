@@ -11,14 +11,12 @@
 @interface _6_Moving_BallsViewController : UIViewController {
 
 	IBOutlet UIImageView *ball;
-	float positionRotation;
-	int viewCenterX, viewCenterY;
+	int positionRotation, viewCenterX, viewCenterY;
 	
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *ball;
-@property (nonatomic) float positionRotation;
-@property (nonatomic) int viewCenterX, viewCenterY;
+@property (nonatomic) int positionRotation, viewCenterX, viewCenterY;
 
 - (void)gameLoop;
 - (void)initGame;

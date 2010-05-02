@@ -45,6 +45,9 @@
 
 - (void)gameLoop {
 	positionRotation += 5;
+	if (positionRotation >= 360) {
+		positionRotation = positionRotation % 360;
+	}
 	[self moveBall];
 }
 
