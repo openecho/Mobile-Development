@@ -10,3 +10,7 @@
 *build*
 *dist*
 
+# Eclipse
+.project
+.classpath
+*/bin/*
