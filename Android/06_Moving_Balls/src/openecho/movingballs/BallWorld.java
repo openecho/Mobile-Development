@@ -218,7 +218,7 @@ public class BallWorld {
 				for (i = 0; i < mBalls.length; i++) {
 					location = mBalls[i].mLocation;
 					location.x = mCentre[0] + (float) Math.cos(mAngle) * mRotationRadius;
-					location.y = mCentre[1] + (float) Math.sin(mAngle) * mRotationRadius;
+					location.y = mCentre[1] + (float) Math.sin(mAngle*2) * mRotationRadius;
 				}
 				mAngle=mAngle+0.05;
 				if(mAngle>=360) {

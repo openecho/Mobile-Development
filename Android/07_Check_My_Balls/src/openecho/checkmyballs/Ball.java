@@ -23,7 +23,7 @@ import android.graphics.Canvas;
  * 
  * @author openecho
  */
-public class Ball extends Entity {
+public class Ball extends GameObject {
 	public int mRadius;
 	public int mDiameter;
 	public Vector mLocation;
@@ -32,6 +32,7 @@ public class Ball extends Entity {
 	public Bitmap mBallBitmap;
 
 	public Ball(BallWorld world, Bitmap ballBitmap) {
+		super();
 		mRadius = 25;
 		mDiameter = mRadius * 2;
 		mLocation = new Vector();
@@ -46,5 +47,12 @@ public class Ball extends Entity {
 
 	public void draw(Canvas canvas) {
 		canvas.drawBitmap(mBallBitmap, mLocation.x - mRadius, canvas.getHeight() - mLocation.y - mRadius, null);
+	}
+	
+	public void generateRandomDirection() {
+		double direction = (Math.random()*360.0D);
+		double speed = (Math.random()*6.0D) + 1.0D;
+		mDirection.x = (float) (Math.cos(direction) * speed);
+		mDirection.y = (float) (Math.sin(direction) * speed);
 	}
 }

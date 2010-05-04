@@ -29,7 +29,7 @@ import android.view.SurfaceHolder;
  * 
  * @author openecho
  */
-public class BallWorld {
+public class BallWorld extends GameObject {
 	int mHeight;
 	int mWidth;
 	SurfaceHolder mHolder;
@@ -43,8 +43,7 @@ public class BallWorld {
 		this.mWidth = -1;
 		this.mHolder = sh;
 		this.mContext = ctx;
-		this.mBalls = new Ball[1];
-		this.mBalls[0] = new Ball(this, ((BitmapDrawable) ctx.getResources().getDrawable(R.drawable.mobile_ball)).getBitmap());
+		this.mBalls = null;
 		this.mGraphicsLoop = new BallGraphicsLoop();
 		this.mWorldLoop = new BallWorldLoop();
 	}
@@ -63,10 +62,23 @@ public class BallWorld {
 			mGraphicsLoop.mInitialized = true;
 		}
 		if (!mWorldLoop.mInitialized) {
+			createWorld(canvas);
 			mWorldLoop.mRunning = true;
 			mWorldLoop.start();
 			mWorldLoop.mInitialized = true;
 		}
+	}
+	
+	public void createWorld(Canvas canvas) {
+		int w = canvas.getWidth();
+		int h = canvas.getHeight();
+		mBalls = new Ball[1];
+		Ball ball = new Ball(this, ((BitmapDrawable) mContext.getResources().getDrawable(R.drawable.mobile_ball)).getBitmap());
+		ball.mLocation.set(w/2,h/2);
+		ball.generateRandomDirection();
+		ball.addComponent(new BallMover());
+		mBalls[0] = ball;
+		addComponent(ball);
 	}
 
 	public void surfaceDestroyed() {
@@ -98,10 +110,21 @@ public class BallWorld {
 		Log.i("trace", "onResume()");
 
 	}
+	
+	public void onReset() {
+		Ball ball = mBalls[0];
+		ball.mLocation.set(mWidth/2,mHeight/2);
+		ball.generateRandomDirection();
+	}
 
 	public void requestExitAndWait() {
 		Log.i("trace", "requestExitAndWait()");
+	}
 
+	@Override
+	public void draw(Canvas canvas) {
+		canvas.drawColor(Color.GRAY);
+		super.draw(canvas);
 	}
 
 	class BallGraphicsLoop extends Thread {
@@ -119,7 +142,6 @@ public class BallWorld {
 		@Override
 		public void run() {
 			ProfileRecorder profiler = ProfileRecorder.sSingleton;
-			int i;
 			int mLoopCount = 0;
 			while (mRunning) {
 				if (mPaused) {
@@ -137,10 +159,7 @@ public class BallWorld {
 
 				if (canvas != null) {
 					profiler.start(ProfileRecorder.PROFILE_DRAW);
-					canvas.drawColor(Color.GRAY);
-					for (i = 0; i < mBalls.length; i++) {
-						mBalls[i].draw(canvas);
-					}
+					draw(canvas);
 					profiler.stop(ProfileRecorder.PROFILE_DRAW);
 
 					profiler.start(ProfileRecorder.PROFILE_PAGE_FLIP);
@@ -152,7 +171,7 @@ public class BallWorld {
 			}
 		}
 
-		public synchronized void wake() {
+		public void wake() {
 			synchronized (this) {
 				this.notify();
 			}
@@ -180,16 +199,16 @@ public class BallWorld {
 		@Override
 		public void run() {
 			ProfileRecorder profiler = ProfileRecorder.sSingleton;
+			long currentTime = System.nanoTime();
 			while (mRunning) {
 				profiler.start(ProfileRecorder.PROFILE_WORLD);
-				
+				update(currentTime, null);
 				profiler.stop(ProfileRecorder.PROFILE_WORLD);
 				try {
-					Thread.sleep(10);
+					Thread.sleep(33);
 				} catch (InterruptedException e) {
 				}
 			}
 		}
 	}
-
 }

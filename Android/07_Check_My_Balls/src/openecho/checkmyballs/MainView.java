@@ -22,63 +22,69 @@ import android.view.SurfaceView;
 
 /**
  * Main View Implementation.
- *
+ * 
  * Holds reference to the BallWorld.
- *
+ * 
  * @author openecho
  */
 public class MainView extends SurfaceView implements SurfaceHolder.Callback {
 
 	SurfaceHolder mHolder;
-    BallWorld mBallWorld;
+	BallWorld mBallWorld;
 
-    public MainView(Context context) {
-        super(context);
-        init(context);
-    }
-    
-    public MainView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init(context);
-    }
-    
-    private void init(Context context) {
-    	mHolder = getHolder();
-    	mHolder.addCallback(this);
-    	mHolder.setType(SurfaceHolder.SURFACE_TYPE_NORMAL);
-    	mBallWorld = new BallWorld(mHolder, context);
-    }
-    
-    public void surfaceCreated(SurfaceHolder holder) {
-    	mBallWorld.surfaceCreated();
-    }
+	public MainView(Context context) {
+		super(context);
+		init(context);
+	}
 
-    public void surfaceDestroyed(SurfaceHolder holder) {
-    	mBallWorld.surfaceDestroyed();
-    }
+	public MainView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		init(context);
+	}
 
-    public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
-    	mBallWorld.onWindowResize(w, h);
-    	
-    }
+	private void init(Context context) {
+		mHolder = getHolder();
+		mHolder.addCallback(this);
+		mHolder.setType(SurfaceHolder.SURFACE_TYPE_NORMAL);
+		mBallWorld = new BallWorld(mHolder, context);
+	}
 
-    public void onPause() {
-    	mBallWorld.onPause();
-    }
+	public void surfaceCreated(SurfaceHolder holder) {
+		mBallWorld.surfaceCreated();
+	}
 
-    public void onResume() {
-    	mBallWorld.onResume();
-    }
+	public void surfaceDestroyed(SurfaceHolder holder) {
+		mBallWorld.surfaceDestroyed();
+	}
 
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        mBallWorld.onWindowFocusChanged(hasFocus);
-    }
-    
-    @Override
-    protected void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-        mBallWorld.requestExitAndWait();
-    }
+	public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
+		mBallWorld.onWindowResize(w, h);
+
+	}
+
+	public void onPause() {
+		mBallWorld.onPause();
+	}
+
+	public void onResume() {
+		mBallWorld.onResume();
+	}
+	
+	public void onReset() {
+		mBallWorld.onReset();
+	}
+
+	@Override
+	public void onWindowFocusChanged(boolean hasFocus) {
+		super.onWindowFocusChanged(hasFocus);
+		mBallWorld.onWindowFocusChanged(hasFocus);
+	}
+
+	@Override
+	protected void onDetachedFromWindow() {
+		super.onDetachedFromWindow();
+		mBallWorld.requestExitAndWait();
+	}
+	
+	
 }

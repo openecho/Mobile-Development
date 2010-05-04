@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
-
 package openecho.checkmyballs;
 
 import android.util.Log;
 
 public class ReferenceChecker {
-    public static boolean sCheckActive = false;
-    public ReferenceChecker() {
-        if (sCheckActive) {
-        	Log.e("ReferenceChecker", "An allocation of type " + this.getClass().getName() + " occurred while the ReferenceChecker is active.");
-        }
-    }
+	public static boolean sCheckActive = false;
+
+	public ReferenceChecker() {
+		if (sCheckActive) {
+			Log.e("ReferenceChecker", "An allocation of type " + this.getClass().getName() + " occurred while the ReferenceChecker is active.");
+		}
+	}
 }
