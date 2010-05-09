@@ -37,8 +37,14 @@ public class BallWorld extends GameObject {
 	Ball[] mBalls;
 	BallGraphicsLoop mGraphicsLoop;
 	BallWorldLoop mWorldLoop;
+	int mScreenFlash;
 
 	public BallWorld(SurfaceHolder sh, Context ctx) {
+		GlobalRegistry gr = GlobalRegistry.sSingleton;
+		if(gr.ballWorld != null) {
+			Log.e("registry", "BallWorld Duplicate.");
+		}
+		gr.ballWorld = this;
 		this.mHeight = -1;
 		this.mWidth = -1;
 		this.mHolder = sh;
@@ -46,6 +52,7 @@ public class BallWorld extends GameObject {
 		this.mBalls = null;
 		this.mGraphicsLoop = new BallGraphicsLoop();
 		this.mWorldLoop = new BallWorldLoop();
+		this.mScreenFlash = -1;
 	}
 
 	public void surfaceCreated() {
@@ -123,7 +130,15 @@ public class BallWorld extends GameObject {
 
 	@Override
 	public void draw(Canvas canvas) {
-		canvas.drawColor(Color.GRAY);
+		if(mScreenFlash == -1) {
+			canvas.drawColor(Color.DKGRAY);
+		} else if(mScreenFlash >=0 && (mScreenFlash <= 5)) {
+			canvas.drawColor(Color.GRAY);
+			mScreenFlash--;
+		} else {
+			canvas.drawColor(Color.WHITE);
+			mScreenFlash--;
+		}
 		super.draw(canvas);
 	}
 

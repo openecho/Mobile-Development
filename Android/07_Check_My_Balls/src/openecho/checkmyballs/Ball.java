@@ -24,6 +24,9 @@ import android.graphics.Canvas;
  * @author openecho
  */
 public class Ball extends GameObject {
+	public static final double MIN_BALL_START_SPEED;
+	public static final double MAX_BALL_START_SPEED;
+	
 	public int mRadius;
 	public int mDiameter;
 	public Vector mLocation;
@@ -31,6 +34,11 @@ public class Ball extends GameObject {
 
 	public Bitmap mBallBitmap;
 
+	static {
+		MIN_BALL_START_SPEED = 2D;
+		MAX_BALL_START_SPEED = 20D;
+	}
+	
 	public Ball(BallWorld world, Bitmap ballBitmap) {
 		super();
 		mRadius = 25;
@@ -51,7 +59,7 @@ public class Ball extends GameObject {
 	
 	public void generateRandomDirection() {
 		double direction = (Math.random()*360.0D);
-		double speed = (Math.random()*6.0D) + 1.0D;
+		double speed = (Math.random()*MAX_BALL_START_SPEED-MIN_BALL_START_SPEED) + MIN_BALL_START_SPEED;
 		mDirection.x = (float) (Math.cos(direction) * speed);
 		mDirection.y = (float) (Math.sin(direction) * speed);
 	}
