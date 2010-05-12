@@ -29,13 +29,13 @@ public class Ball extends GameObject {
 	
 	public int mRadius;
 	public int mDiameter;
-	public Vector mLocation;
-	public Vector mDirection;
+	public Vector2D mLocation;
+	public Vector2D mDirection;
 
 	public Bitmap mBallBitmap;
 
 	static {
-		MIN_BALL_START_SPEED = 2D;
+		MIN_BALL_START_SPEED = 10D;
 		MAX_BALL_START_SPEED = 20D;
 	}
 	
@@ -43,8 +43,8 @@ public class Ball extends GameObject {
 		super();
 		mRadius = 25;
 		mDiameter = mRadius * 2;
-		mLocation = new Vector();
-		mDirection = new Vector();
+		mLocation = new Vector2D();
+		mDirection = new Vector2D();
 		mBallBitmap = ballBitmap;
 	}
 
@@ -54,7 +54,7 @@ public class Ball extends GameObject {
 	}
 
 	public void draw(Canvas canvas) {
-		canvas.drawBitmap(mBallBitmap, mLocation.x - mRadius, canvas.getHeight() - mLocation.y - mRadius, null);
+		canvas.drawBitmap(mBallBitmap, (float) (mLocation.x - mRadius), (float) (canvas.getHeight() - mLocation.y - mRadius), null);
 	}
 	
 	public void generateRandomDirection() {

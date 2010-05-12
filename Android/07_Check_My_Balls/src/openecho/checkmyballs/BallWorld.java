@@ -30,6 +30,7 @@ import android.view.SurfaceHolder;
  * @author openecho
  */
 public class BallWorld extends GameObject {
+	
 	int mHeight;
 	int mWidth;
 	SurfaceHolder mHolder;
@@ -81,7 +82,7 @@ public class BallWorld extends GameObject {
 		int h = canvas.getHeight();
 		mBalls = new Ball[1];
 		Ball ball = new Ball(this, ((BitmapDrawable) mContext.getResources().getDrawable(R.drawable.mobile_ball)).getBitmap());
-		ball.mLocation.set(w/2,h/2);
+		ball.mLocation.set(150,150);
 		ball.generateRandomDirection();
 		ball.addComponent(new BallMover());
 		mBalls[0] = ball;
@@ -120,7 +121,6 @@ public class BallWorld extends GameObject {
 	
 	public void onReset() {
 		Ball ball = mBalls[0];
-		ball.mLocation.set(mWidth/2,mHeight/2);
 		ball.generateRandomDirection();
 	}
 
@@ -132,7 +132,7 @@ public class BallWorld extends GameObject {
 	public void draw(Canvas canvas) {
 		if(mScreenFlash == -1) {
 			canvas.drawColor(Color.DKGRAY);
-		} else if(mScreenFlash >=0 && (mScreenFlash <= 5)) {
+		} else if(mScreenFlash >=0 && (mScreenFlash <= 2)) {
 			canvas.drawColor(Color.GRAY);
 			mScreenFlash--;
 		} else {
